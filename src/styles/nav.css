@@ -37,13 +37,13 @@ header{
     width: 60%;
 }
 .nav-search input{
-    width: 98%;
-    padding: 1rem;
+    width: 90%;
+    padding: .7rem;
     outline: 1px solid white;
     border: none;
     background-color: rgba(0, 0, 0, .6);
     color: white;
-    font-size: .8rem;
+    font-size: .6rem;
     border-radius: 4px;
 }
 
@@ -61,14 +61,14 @@ header{
 } */
 .nav-bar-section nav a {
     text-decoration: none;
-    font-size: .7rem;
+    font-size: .9rem;
     color: white;
     margin-left: 1.3rem;
 }
 .football-img{
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
 }
 .logo-football-img{
     display: flex;
@@ -77,7 +77,7 @@ header{
 }
 .home-caret {
     margin-left: 1rem;
-    font-size: 1rem;
+    font-size: .6rem;
     cursor: pointer;
 }
 .home-caret:hover{
