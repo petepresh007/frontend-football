@@ -27,7 +27,7 @@
 
 .link-adm {
     margin-top: 2rem;
-    padding: 6rem;
+    padding: .6rem;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     width: 100%;
@@ -83,12 +83,12 @@
     height: 150px;
     outline: none;
     border: none;
-    font-size: 1rem;
+    font-size: .6rem;
 }
 .admin-update-form select{
     padding: .6rem;
     width: 100%;
-    font-size: 1rem;
+    font-size: .6rem;
 }
 .admin-update-form button{
     width: 100%;
@@ -96,5 +96,5 @@
     margin-top: 1rem;
     background: gray;
     color: white;
-    font-size: 1rem;
+    font-size: .6rem;
 }
