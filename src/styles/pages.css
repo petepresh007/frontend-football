@@ -1,12 +1,12 @@
 .hompage {
-    margin-top: 13rem;
+    margin-top: 11rem;
     width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .home-top-display img {
     width: 100%;
-    height: 600px;
+    height: 500px;
     opacity: 1;
     image-resolution: 100%;
 }
@@ -19,7 +19,7 @@
     position: absolute;
     top: 70%;
     left: 2%;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: bolder;
     width: 45%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -30,7 +30,7 @@
     margin-top: 2rem;
     margin-left: 10%;
     margin-right: 10%;
-    font-size: 1.8rem;
+    font-size: 1rem;
 }
 
 .home-bottom-center-first {
@@ -42,7 +42,7 @@
 .bottom-right {
     max-height: 1000px;
     overflow-y: auto;
-    width: 30%;
+    width: 25%;
     background-color: rgba(0, 0, 0, .5);
     padding: 1rem;
 }
