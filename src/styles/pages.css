@@ -55,7 +55,7 @@
 .bottom-left {
     width: 70%;
     display: grid;
-    gap: 26px;
+    gap: 20px;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -67,8 +67,8 @@
 
 .bottom-left-cont {
     background-color: rgba(0, 0, 0, .5);
-    width: 400px;
-    height: 500px;
+    width: 250px;
+    height: 300px;
 }
 
 .bottom-left-cont p,
