@@ -27,7 +27,7 @@ export const UCL = () => {
             {
                 news && news.map(data => (
                     <div className="football-news-details" key={data.id}>
-                        <h1 onClick={() => navigate(`/news/${data.id}`)}>{data.title}</h1>
+                        <h3 onClick={() => navigate(`/news/${data.id}`)}>{data.title}</h3>
                         <img src={`${url}/upload/${data.file[0].filename}`} alt="image" />
                         <small>{data.date}</small>
                     </div>
