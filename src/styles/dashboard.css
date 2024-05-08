@@ -3,15 +3,15 @@
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 4rem;
-    font-size: 1.3rem;
+    font-size: .8rem;
 }
 
 .dashboard input {
     width: 100%;
-    padding: 1rem;
+    padding: .6rem;
     border: 1px solid #eee;
     background: rgba(0, 0, 0, .5);
-    font-size: 1.5rem;
+    font-size: .8rem;
     color: white;
 }
 
@@ -21,7 +21,7 @@
     justify-content: space-between;
     margin-top: 2rem;
     border-top: 1px solid #eee;
-    padding: 1rem;
+    padding: .6rem;
     border-bottom: 1px solid #eee;
 }
 
@@ -37,7 +37,7 @@
     color: #eee;
 }
 .link-adm a:not(:first-child){
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 .dashboard-center{
     display: flex;
@@ -47,8 +47,8 @@
 .dashboard-center-right{
     width: 50%;
     background: rgba(0, 0, 0, .5);
-    padding: 1rem;
-    max-height: 800px;
+    padding: .6rem;
+    max-height: 500px;
     overflow-y: auto;
     position: relative;
 }
