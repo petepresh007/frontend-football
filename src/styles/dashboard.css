@@ -27,7 +27,7 @@
 
 .link-adm {
     margin-top: 2rem;
-    padding: 1rem;
+    padding: 6rem;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     width: 100%;
@@ -48,7 +48,7 @@
     width: 50%;
     background: rgba(0, 0, 0, .5);
     padding: .6rem;
-    max-height: 500px;
+    max-height: 470px;
     overflow-y: auto;
     position: relative;
 }
@@ -61,9 +61,9 @@
 }
 .admin-update-form{
     position: fixed;
-    top: 400px;
-    padding: 1rem;
-    width: 800px;
+    top: 300px;
+    padding: .6rem;
+    width: 400px;
     background: black;
 }
 .admin-update-form .edit-close{
@@ -78,23 +78,23 @@
 }
 .admin-update-form textarea{
     width: 96%;
-    padding: 1rem;
+    padding: .6rem;
     margin-top: 1rem;
     height: 150px;
     outline: none;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 .admin-update-form select{
-    padding: 1rem;
+    padding: .6rem;
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 .admin-update-form button{
     width: 100%;
-    padding: 1rem;
+    padding: .6rem;
     margin-top: 1rem;
     background: gray;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
