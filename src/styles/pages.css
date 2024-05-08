@@ -1,12 +1,12 @@
 .hompage {
-    margin-top: 17rem;
+    margin-top: 13rem;
     width: 100%;
     margin-bottom: 4rem;
 }
 
 .home-top-display img {
     width: 100%;
-    height: 900px;
+    height: 600px;
     opacity: 1;
     image-resolution: 100%;
 }
