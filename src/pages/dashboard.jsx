@@ -24,6 +24,7 @@ export const Dashboard = () => {
         setFormID(id);
     }
 
+
     const hideshowform = () => setShowForm(previous => !previous);
 
     const allNews = async () => {
@@ -98,6 +99,19 @@ export const Dashboard = () => {
         setShowForm(false)
     }
 
+
+    const logout = async () => {
+        try {
+            const { data } = await axios.post(`${adminUrl}/logoutadmin`);
+            console.log(data)
+            setAdmin("");
+            navigate("/adminlogin")
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
     return (
         <div className="dashboard">
             {admin && <h3>Welcome {admin.username}</h3>}
@@ -118,7 +132,7 @@ export const Dashboard = () => {
                     {news ? <span>{news.length}</span> : <span>loading....</span>}
                 </div>
                 <div className="link-adm">
-                    <Link>Logout</Link>
+                    <Link onClick={()=>logout()}>Logout</Link>
                     <Link to="/createnews">Create-News</Link>
                     <Link>Create-User</Link>
                 </div>
