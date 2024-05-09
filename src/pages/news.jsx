@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import {useState, useEffect} from "react";
 import axios from "axios";
-import {football, url} from "../server"
+import {football, url} from "../server";
 
 export const News = () =>{
     const {id} = useParams();

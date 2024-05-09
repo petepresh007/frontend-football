@@ -115,10 +115,10 @@
 }
 
 .selected-news {
-    margin-top: 20rem;
+    margin-top: 15rem;
     margin-left: 20%;
     margin-right: 20%;
-    font-size: 2rem;
+    font-size: .8rem;
     line-height: 3.4rem;
     margin-bottom: 4rem;
 }
@@ -129,7 +129,7 @@
 }
 
 .selected-news-images img {
-    height: 400px;
+    height: 200px;
     width: 10%;
     flex: 1
 }
@@ -140,7 +140,7 @@
 }
 
 .h-n {
-    width: 1000px;
+    width: 600px;
 }
 
 .bottom-left-cont p {
