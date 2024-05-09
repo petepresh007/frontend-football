@@ -170,8 +170,8 @@
     align-items: center;
 }
 .about-center p{
-    width: 300px;
-    font-size: 1rem;
-    padding: .6rem;
-    line-height: 1rem;
+    width: 420px;
+    font-size: 1.1rem;
+    padding: .8rem;
+    line-height: 1.4rem;
 }
