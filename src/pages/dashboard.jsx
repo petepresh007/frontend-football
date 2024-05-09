@@ -100,18 +100,6 @@ export const Dashboard = () => {
     }
 
 
-    const logout = async () => {
-        try {
-            const { data } = await axios.post(`${adminUrl}/logoutadmin`);
-            console.log(data)
-            setAdmin("");
-            navigate("/adminlogin")
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
-
     return (
         <div className="dashboard">
             {admin && <h3>Welcome {admin.username}</h3>}
@@ -132,7 +120,6 @@ export const Dashboard = () => {
                     {news ? <span>{news.length}</span> : <span>loading....</span>}
                 </div>
                 <div className="link-adm">
-                    <Link onClick={()=>logout()}>Logout</Link>
                     <Link to="/createnews">Create-News</Link>
                     <Link>Create-User</Link>
                 </div>
