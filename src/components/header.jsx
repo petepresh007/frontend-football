@@ -26,9 +26,9 @@ export const HeaderElement = () => {
     //     }
     // }
 
-    useEffect(() => {
-        getAdmin();
-    }, []);
+    // useEffect(() => {
+    //     getAdmin();
+    // }, []);
 
     const logout = async () => {
         try {
