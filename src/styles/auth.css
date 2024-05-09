@@ -32,7 +32,7 @@
     color: white;
 }
 .create-news{
-    margin-top: 26rem;
+    margin-top: 14rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@
 .create-news-center{
     background-color: rgba(0, 0, 0, .5);
     padding: 1rem;
-    width: 600px;
+    width: 350px;
 }
 .create-news-center input{
     width: 94%;
@@ -53,10 +53,10 @@
 }
 .create-news-center textarea{
     width: 94%;
-    height: 200px;
+    height: 120px;
     border: none;
     outline: none;
-    font-size: 1rem;
+    font-size: .8rem;
     padding: .6rem;
 }
 .create-news-center select{
@@ -64,7 +64,7 @@
     padding: .6rem;
     outline: none;
     border: none;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 .create-news-center button{
     width: 98%;
@@ -76,7 +76,7 @@
     color: white;
 }
 .aifr{
-    font-size: 1rem;
+    font-size: .8rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
