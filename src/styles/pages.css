@@ -160,3 +160,18 @@
 .football-news-details h1{
     cursor: pointer;
 }
+.about-center{
+    margin-top: 12rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-center p{
+    width: 300px;
+    font-size: 1rem;
+    padding: .6rem;
+    line-height: 1rem;
+}

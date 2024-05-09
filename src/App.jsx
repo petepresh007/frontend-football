@@ -13,7 +13,7 @@ import {Bundesliga} from "./pages/bundesliga";
 import {SerieA} from "./pages/seriea";
 import {NPFL} from "./pages/npfl";
 import {UCL} from "./pages/ucl";
-
+import {About} from './pages/about';
 
 const router = createBrowserRouter([
   {
@@ -64,6 +64,10 @@ const router = createBrowserRouter([
       {
         path:"/ucl",
         element:<UCL/>
+      },
+      {
+        path:'/about',
+        element:<About/>
       }
     ]
   }

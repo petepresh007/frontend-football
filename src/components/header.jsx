@@ -70,8 +70,8 @@ export const HeaderElement = () => {
 
                 <div className="nav-bar-section">
                     <nav>
-                        <Link>Home</Link>
-                        <Link>About</Link>
+                        <Link to='/'>Home</Link>
+                        <Link to='/about'>About</Link>
                         <span>
                             <Link>Football</Link>
                             <AiFillCaretDown className="home-caret" onClick={() => toggleNewsNav()} />
