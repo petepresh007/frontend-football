@@ -17,18 +17,18 @@ export const HeaderElement = () => {
     const toggleNewsNav = () => setshowHideNav(previous => !previous);
     //const toggleFootball = () => setFootball(previous => !previous);
 
-    // const getAdmin = async () => {
-    //     try {
-    //         const { data } = await axios.get(`${adminUrl}/persistlogin`);
-    //         setAdmin(data)
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
+    const getAdmin = async () => {
+        try {
+            const { data } = await axios.get(`${adminUrl}/persistlogin`);
+            setAdmin(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
-    // useEffect(() => {
-    //     getAdmin();
-    // }, []);
+    useEffect(() => {
+        getAdmin();
+    }, []);
 
     const logout = async () => {
         try {
