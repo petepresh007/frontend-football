@@ -176,7 +176,7 @@ export const HomePage = () => {
                             {
                                 breakingNews && breakingNews.map(data => (
                                     <div key={data.id} className="home-right-cont">
-                                        <small style={{ fontSize: ".8rem" }}>{data.date}</small>
+                                        <small style={{ fontSize: ".5rem" }}>{data.date}</small>
                                         <p onClick={() => navigate(`/news/${data.id}`)}>{data.title}</p>
                                     </div>
                                 ))
@@ -194,7 +194,7 @@ export const HomePage = () => {
                                     return <div className="bottom-left-cont" key={data.id}>
                                         <img src={`${url}/upload/${data.file[0].filename}`} alt="image" />
                                         <p onClick={() => navigate(`/news/${data.id}`)}>{data.title}</p>
-                                        <small style={{ fontSize: ".8rem" }}>{data.date}</small>
+                                        <small style={{ fontSize: ".5rem" }}>{data.date}</small>
                                     </div>
                                 })
                             }
@@ -207,7 +207,7 @@ export const HomePage = () => {
                             {
                                 epl && epl.map(data => (
                                     <div className="epl-single" key={data.id}>
-                                        <small style={{ fontSize: ".8rem" }}>{data.date}</small>
+                                        <small style={{ fontSize: ".5rem" }}>{data.date}</small>
                                         <img src={`${url}/upload/${data.file[0].filename}`} alt="images" />
                                         <p onClick={() => navigate(`/news/${data.id}`)}>{data.title}</p>
                                     </div>
@@ -222,7 +222,7 @@ export const HomePage = () => {
                             {
                                 laliga && laliga.map(data => (
                                     <div className="epl-single" key={data.id}>
-                                        <small style={{ fontSize: ".8rem" }}>{data.date}</small>
+                                        <small style={{ fontSize: ".5rem" }}>{data.date}</small>
                                         <img src={`${url}/upload/${data.file[0].filename}`} alt="images" />
                                         <p onClick={() => navigate(`/news/${data.id}`)}>{data.title}</p>
                                     </div>
@@ -237,7 +237,7 @@ export const HomePage = () => {
                             {
                                 ucl && ucl.map(data => (
                                     <div className="epl-single" key={data.id}>
-                                        <small style={{ fontSize: ".8rem" }}>{data.date}</small>
+                                        <small style={{ fontSize: ".5rem" }}>{data.date}</small>
                                         <img src={`${url}/upload/${data.file[0].filename}`} alt="images" />
                                         <p onClick={() => navigate(`/news/${data.id}`)}>{data.title}</p>
                                     </div>
@@ -252,7 +252,7 @@ export const HomePage = () => {
                             {
                                 bundesliga && bundesliga.map(data => (
                                     <div className="epl-single" key={data.id}>
-                                        <small style={{ fontSize: ".8rem" }}>{data.date}</small>
+                                        <small style={{ fontSize: ".5rem" }}>{data.date}</small>
                                         <img src={`${url}/upload/${data.file[0].filename}`} alt="images" />
                                         <p onClick={() => navigate(`/news/${data.id}`)}>{data.title}</p>
                                     </div>
@@ -267,7 +267,7 @@ export const HomePage = () => {
                             {
                                 npfl && npfl.map(data => (
                                     <div className="epl-single" key={data.id}>
-                                        <small style={{ fontSize: ".8rem" }}>{data.date}</small>
+                                        <small style={{ fontSize: ".5rem" }}>{data.date}</small>
                                         <img src={`${url}/upload/${data.file[0].filename}`} alt="images" />
                                         <p onClick={() => navigate(`/news/${data.id}`)}>{data.title}</p>
                                     </div>
@@ -282,7 +282,7 @@ export const HomePage = () => {
                             {
                                 seriea && seriea.map(data => (
                                     <div className="epl-single" key={data.id}>
-                                        <small style={{ fontSize: ".8rem" }}>{data.date}</small>
+                                        <small style={{ fontSize: ".5rem" }}>{data.date}</small>
                                         <img src={`${url}/upload/${data.file[0].filename}`} alt="images" />
                                         <p onClick={() => navigate(`/news/${data.id}`)}>{data.title}</p>
                                     </div>

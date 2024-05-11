@@ -42,7 +42,7 @@ export const Login = () => {
     return (
         <div className="login-admin">
             <div className="login-admin-center">
-                <div className="login-admin-center-details">
+                <div  className="login-admin-center-details">
                     <h1>Login</h1>
                     <form action="" onSubmit={handleLogin}>
                         <div>

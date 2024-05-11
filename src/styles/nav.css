@@ -1,4 +1,4 @@
-header{
+header {
     width: 100%;
     position: fixed;
     top: 0;
@@ -10,7 +10,7 @@ header{
     background-color: black;
 }
 
-.nav-button{
+.nav-button {
     /* float: right; */
     padding: 1.5rem;
     font-weight: 100;
@@ -21,22 +21,25 @@ header{
     border-bottom: 1px solid gray;
 }
 
-.socials-float-left{
+.socials-float-left {
     display: flex;
     align-items: center;
     gap: 4rem;
     width: 40%;
 }
-.socials-logo{
+
+.socials-logo {
     font-size: 1rem;
     border: none;
     outline: none;
     cursor: pointer;
 }
-.nav-search{
+
+.nav-search {
     width: 60%;
 }
-.nav-search input{
+
+.nav-search input {
     width: 90%;
     padding: .7rem;
     outline: 1px solid white;
@@ -47,15 +50,17 @@ header{
     border-radius: 4px;
 }
 
-.nav-bottom .bars{
+.nav-bottom .bars {
     display: none;
 }
-.nav-bottom{
+
+.nav-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
 }
+
 /* .nav-bar-section{
     display: flex;
 } */
@@ -65,29 +70,34 @@ header{
     color: white;
     margin-left: 1.1rem;
 }
-.football-img{
+
+.football-img {
     height: 30px;
     width: 30px;
     border-radius: 30px;
 }
-.logo-football-img{
+
+.logo-football-img {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .home-caret {
     margin-left: 1rem;
     font-size: .6rem;
     cursor: pointer;
 }
-.home-caret:hover{
+
+.home-caret:hover {
     rotate: 180deg;
 }
 
-.news-section{
+.news-section {
     display: none;
 }
-.news-section a{
+
+.news-section a {
     text-decoration: none;
     color: white;
     padding: .5rem;
@@ -96,6 +106,31 @@ header{
     display: block;
     border-bottom: 1px solid #eee;
 }
-.show-news-nav{
+
+.show-news-nav {
     display: block;
+}
+
+/**TABLET MODE*/
+@media screen and (max-width: 768px) {
+    .nav-button {
+        padding: 1rem;
+        gap: 1.5rem;
+        font-size: .5rem;
+    }
+    .socials-float-left {
+        gap: 2rem;
+    }
+    .nav-search input {
+        width: 95%;
+    }
+    .nav-bar-section nav a{
+        font-size: .5rem;
+    }
+    .news-section a{
+        font-size: .5rem;
+    }
+    .home-caret{
+        font-size: .4rem;
+    }
 }

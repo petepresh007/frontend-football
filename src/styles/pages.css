@@ -112,6 +112,7 @@
     background-color: rgba(0, 0, 0, .5);
     padding: .8rem;
     font-size: .9rem;
+    width: 240px;
 }
 
 .selected-news {
@@ -129,7 +130,7 @@
 }
 
 .selected-news-images img {
-    height: 200px;
+    height: 250px;
     width: 10%;
     flex: 1
 }
@@ -157,10 +158,12 @@
     margin-right: 10%;
     margin-bottom: 5rem;
 }
-.football-news-details h1{
+
+.football-news-details h1 {
     cursor: pointer;
 }
-.about-center{
+
+.about-center {
     margin-top: 12rem;
     margin-left: 10rem;
     margin-right: 10rem;
@@ -169,9 +172,72 @@
     justify-content: center;
     align-items: center;
 }
-.about-center p{
+
+.about-center p {
     width: 550px;
     font-size: 1.3rem;
     padding: .8rem;
     line-height: 2.5rem;
+}
+
+/**TABLET MODE*/
+@media screen and (max-width: 768px) {
+    .hompage {
+        margin-top: 9rem;
+    }
+
+    .home-top-display img {
+        height: 400px;
+    }
+
+    .home-top-display p {
+        top: 60%;
+    }
+
+    .home-bottom {
+        font-size: .4rem;
+    }
+
+    .bottom-right {
+        width: 35%;
+    }
+
+    .bottom-left {
+        width: 65%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .bottom-left-cont {
+        width: 200px;
+        height: 200px;
+    }
+
+    .bottom-left-cont img {
+        height: 100px;
+    }
+
+    .home-bottom {
+        font-size: .6rem;
+    }
+
+    .EPL img,
+    .football-news-details img {
+        height: 100px;
+    }
+
+    .epl-single,
+    .football-news-details {
+        height: 170px;
+        font-size: .5rem;
+        width: 115px;
+    }
+
+    .selected-news {
+        font-size: .7rem;
+    }
+
+    .selected-news-images img {
+        height: 230px;
+    }
 }

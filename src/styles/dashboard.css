@@ -32,19 +32,23 @@
     border-bottom: 1px solid #eee;
     width: 100%;
 }
-.link-adm a{
+
+.link-adm a {
     text-decoration: none;
     color: #eee;
 }
-.link-adm a:not(:first-child){
+
+.link-adm a:not(:first-child) {
     margin-left: 1rem;
 }
-.dashboard-center{
+
+.dashboard-center {
     display: flex;
     align-items: center;
     margin-top: 2rem;
 }
-.dashboard-center-right{
+
+.dashboard-center-right {
     width: 50%;
     background: rgba(0, 0, 0, .5);
     padding: .6rem;
@@ -52,31 +56,36 @@
     overflow-y: auto;
     position: relative;
 }
-.dash-news-disp-cen{
+
+.dash-news-disp-cen {
     display: flex;
     align-items: center;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     justify-content: space-between;
 }
-.admin-update-form{
+
+.admin-update-form {
     position: fixed;
     top: 300px;
     padding: .6rem;
     width: 400px;
     background: black;
 }
-.admin-update-form .edit-close{
+
+.admin-update-form .edit-close {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
 }
-.admin-update-form input{
+
+.admin-update-form input {
     width: 96%;
     background: rgba(0, 0, 0, .5);
 }
-.admin-update-form textarea{
+
+.admin-update-form textarea {
     width: 96%;
     padding: .6rem;
     margin-top: 1rem;
@@ -85,16 +94,39 @@
     border: none;
     font-size: .6rem;
 }
-.admin-update-form select{
+
+.admin-update-form select {
     padding: .6rem;
     width: 100%;
     font-size: .6rem;
 }
-.admin-update-form button{
+
+.admin-update-form button {
     width: 100%;
     padding: .6rem;
     margin-top: 1rem;
     background: gray;
     color: white;
     font-size: .6rem;
+}
+
+/**TABLET*/
+@media screen and (max-width: 768px) {
+    .dashboard {
+        margin-top: 13rem;
+        font-size: .5rem;
+    }
+
+    .length-nav .len {
+        padding: .4rem;
+    }
+
+    .dashboard input {
+        font-size: .5rem;
+        padding: .4rem;
+    }
+
+    .link-adm {
+        padding: .4rem;
+    }
 }
