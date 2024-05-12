@@ -194,12 +194,13 @@ export const HomePage = () => {
                                     return <div className="bottom-left-cont" key={data.id}>
                                         <img src={`${url}/upload/${data.file[0].filename}`} alt="image" />
                                         <p onClick={() => navigate(`/news/${data.id}`)}>{data.title}</p>
-                                        <small style={{ fontSize: ".5rem" }}>{data.date}</small>
+                                        <small className="llf" style={{ fontSize: ".5rem" }}>{data.date}</small>
                                     </div>
                                 })
                             }
                         </div>
                     </section>
+                    
 
                     <section className="EPL">
                         <h1>English Premier League</h1>

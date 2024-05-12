@@ -4,7 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from 'react';
 import {adminUrl} from "../server";
 import axios from "axios";
-import {UserContext} from "../components/constext"
+import {UserContext} from "../components/constext";
+import {FaSearch} from "react-icons/fa";
 
 export const HeaderElement = () => {
     const navigate = useNavigate();
@@ -46,7 +47,7 @@ export const HeaderElement = () => {
         <header>
             <div className="nav-button">
                 <section className="socials-float-left">
-                    <p>Total football, contact us</p>
+                    <p className="ctc-us">Total football, contact us</p>
                     <AiFillFacebook className="socials-logo" />
                     <AiFillInstagram className="socials-logo" />
                     <FaTwitter className="socials-logo" />
@@ -57,6 +58,7 @@ export const HeaderElement = () => {
                         placeholder="search"
                     />
                 </form>
+                <FaSearch className="na-sr"/>
             </div>
 
             <div className="nav-bottom">
@@ -67,6 +69,7 @@ export const HeaderElement = () => {
                     </section>
                     <FaBars className="bars" />
                 </div>
+
 
                 <div className="nav-bar-section">
                     <nav>
