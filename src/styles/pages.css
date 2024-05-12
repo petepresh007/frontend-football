@@ -252,6 +252,15 @@
     .epl-center {
         display: block;
     }
+    .epl-single{
+        margin-bottom: .8rem;
+        width: 93%;
+        font-size: .8rem;
+        height: 200px;
+    }
+    .epl-single img{
+        height: 130px;
+    }
     .bottom-left{
         display: block;
         margin-top: 1rem;
@@ -291,5 +300,17 @@
     }
     .home-arrow{
         display: none;
+    }
+    .footer{
+        font-size: .3rem;
+    }
+    .selected-news{
+        margin-top: 10rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .btn-bck{
+        margin-top: 1rem;
+        font-size: 1rem;
     }
 }

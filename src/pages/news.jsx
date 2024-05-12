@@ -2,6 +2,7 @@ import {useParams} from "react-router-dom";
 import {useState, useEffect} from "react";
 import axios from "axios";
 import {football, url} from "../server";
+import {FaArrowLeft} from "react-icons/fa";
 
 export const News = () =>{
     const {id} = useParams();
@@ -30,6 +31,7 @@ export const News = () =>{
 
     return(
         <div className="selected-news">
+            <FaArrowLeft className="btn-bck" onClick={()=>window.history.back()}/>
             <div className="selected-news-center">
                 <div className="h-n">
                     <h3>{selectedNews.title}</h3>
