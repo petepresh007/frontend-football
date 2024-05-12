@@ -14,6 +14,8 @@ import {SerieA} from "./pages/seriea";
 import {NPFL} from "./pages/npfl";
 import {UCL} from "./pages/ucl";
 import {About} from './pages/about';
+import {Football} from "./pages/football";
+import {Search} from "./components/search";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +70,14 @@ const router = createBrowserRouter([
       {
         path:'/about',
         element:<About/>
+      },
+      {
+        path:"/football",
+        element: <Football/>
+      },
+      {
+        path:"/search",
+        element: <Search/>
       }
     ]
   }

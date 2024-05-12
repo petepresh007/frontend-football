@@ -1,11 +1,11 @@
-import { FaBars, FaTemperatureHigh, FaTwitter } from "react-icons/fa";
+import { FaBars, FaTemperatureHigh, FaTwitter, FaWhatsapp, FaFootballBall } from "react-icons/fa";
 import { AiFillFacebook, AiFillInstagram, AiFillCaretDown } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from 'react';
-import {adminUrl} from "../server";
+import { adminUrl } from "../server";
 import axios from "axios";
-import {UserContext} from "../components/constext";
-import {FaSearch} from "react-icons/fa";
+import { UserContext } from "../components/constext";
+import { FaSearch } from "react-icons/fa";
 
 export const HeaderElement = () => {
     const navigate = useNavigate();
@@ -13,10 +13,12 @@ export const HeaderElement = () => {
     //const [admin, setAdmin] = useState("")
     const { admin, setAdmin } = useContext(UserContext)
     const [football, setFootball] = useState("");
+    const [hidenavmobile, setHidenavmobile] = useState(true);
     axios.defaults.withCredentials = true;
 
     const toggleNewsNav = () => setshowHideNav(previous => !previous);
     //const toggleFootball = () => setFootball(previous => !previous);
+    const toggleMobileNav = () => setHidenavmobile(previous => !previous)
 
     const getAdmin = async () => {
         try {
@@ -48,9 +50,21 @@ export const HeaderElement = () => {
             <div className="nav-button">
                 <section className="socials-float-left">
                     <p className="ctc-us">Total football, contact us</p>
-                    <AiFillFacebook className="socials-logo" />
-                    <AiFillInstagram className="socials-logo" />
-                    <FaTwitter className="socials-logo" />
+                    <Link className="ss-tt">
+                        <AiFillFacebook className="socials-logo" />
+                    </Link>
+
+                    <Link className="ss-tt" to='https://www.instagram.com/pet_dozie?igsh=MXBwNmZwZDg1cG90MQ=='>
+                        <AiFillInstagram className="socials-logo" />
+                    </Link>
+
+                    <Link className="ss-tt" to='https://x.com/peter_chiedozie?t=vtiS3wRhTH6_FVoDJXckAQ&s=09'>
+                        <FaTwitter className="socials-logo" />
+                    </Link>
+                    <Link className="ss-tt" to='https://wa.link/jya71e'>
+                        <FaWhatsapp className="socials-logo" />
+                    </Link>
+
                 </section>
                 <form className="nav-search">
                     <input
@@ -58,8 +72,9 @@ export const HeaderElement = () => {
                         placeholder="search"
                     />
                 </form>
-                <FaSearch className="na-sr"/>
+                <FaSearch className="na-sr" />
             </div>
+
 
             <div className="nav-bottom">
                 <div className="logo-button">
@@ -67,37 +82,38 @@ export const HeaderElement = () => {
                         <h1 onClick={() => navigate("/")} style={{ cursor: "pointer" }}><span style={{ color: "red" }}>Total</span>Football</h1>
                         <img src="./football_2.jpeg" alt="" className="football-img" />
                     </section>
-                    <FaBars className="bars" />
+                    <FaFootballBall onClick={() => toggleNewsNav()} />
+                    <FaBars onClick={() => toggleMobileNav()} className="bars" />
                 </div>
 
 
                 <div className="nav-bar-section">
-                    <nav>
-                        <Link to='/'>Home</Link>
-                        <Link to='/about'>About</Link>
+                    <nav className={`nav-list ${hidenavmobile ? "" : "show-nav-section"}`}>
+                        <Link to='/' onClick={() => toggleMobileNav()}>Home</Link>
+                        <Link to='/about' onClick={() => toggleMobileNav()}>About</Link>
                         <span>
-                            <Link>Football</Link>
+                            <Link to='/football' onClick={() => toggleMobileNav()}>Football</Link>
                             <AiFillCaretDown className="home-caret" onClick={() => toggleNewsNav()} />
                         </span>
-                        <Link>Livescores</Link>
-                        <Link>Betting-tips</Link>
+                        <Link onClick={() => toggleMobileNav()}>Livescores</Link>
+                        <Link onClick={() => toggleMobileNav()}>Betting-tips</Link>
                         {
                             admin ? (
                                 <span>
-                                    <Link to="/dashboard">Account</Link>
-                                    <Link onClick={() => logout()}>Logout</Link>
+                                    <Link to="/dashboard" onClick={() => toggleMobileNav()}>Account</Link>
+                                    <Link onClick={() => logout()} >Logout</Link>
                                 </span>
                             ) : (
                                 <span>
-                                    <Link>Sign-up</Link>
-                                    <Link>Sign-in</Link>
+                                    <Link onClick={() => toggleMobileNav()}>Sign-up</Link>
+                                    <Link onClick={() => toggleMobileNav()}>Sign-in</Link>
                                 </span>
                             )
                         }
 
                     </nav>
                     <section className={`news-section ${showHideNav ? "" : "show-news-nav"}`}>
-                        <Link to="/epl" onClick={()=>toggleNewsNav()}>EPL</Link>
+                        <Link to="/epl" onClick={() => toggleNewsNav()}>EPL</Link>
                         <Link to='/seriea' onClick={() => toggleNewsNav()}>Serie A</Link>
                         <Link to="/laliga" onClick={() => toggleNewsNav()}>Laliga</Link>
                         <Link to="/bundesliga" onClick={() => toggleNewsNav()}>Bundesliga</Link>

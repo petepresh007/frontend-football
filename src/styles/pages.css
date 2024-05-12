@@ -252,22 +252,25 @@
     .epl-center {
         display: block;
     }
-    .epl-single{
+
+    .epl-single {
         margin-bottom: .8rem;
         width: 93%;
         font-size: .8rem;
         height: 200px;
     }
-    .epl-single img{
+
+    .epl-single img {
         height: 130px;
     }
-    .bottom-left{
+
+    .bottom-left {
         display: block;
         margin-top: 1rem;
         width: 100%;
     }
 
-    .bottom-left-cont{
+    .bottom-left-cont {
         background: rgba(0, 0, 0, .5);
         width: 95%;
         display: flex;
@@ -279,38 +282,80 @@
         padding: .6rem;
         font-size: .8rem;
     }
-    .llf{
+
+    .llf {
         display: none;
     }
 
-    .bottom-left-cont img{
+    .bottom-left-cont img {
         width: 100px;
         height: 70px;
     }
-    .home-top-display img{
+
+    .home-top-display img {
         height: 300px;
     }
-    .home-top-display p{
+
+    .home-top-display p {
         font-size: 1.5rem;
         width: 60%;
     }
-    .bottom-right{
+
+    .bottom-right {
         width: 100%;
         padding: .3rem;
     }
-    .home-arrow{
+
+    .home-arrow {
         display: none;
     }
-    .footer{
+
+    .footer {
         font-size: .3rem;
     }
-    .selected-news{
+
+    .selected-news {
         margin-top: 10rem;
         margin-left: 5%;
         margin-right: 5%;
     }
-    .btn-bck{
+
+    .btn-bck {
         margin-top: 1rem;
         font-size: 1rem;
+    }
+
+    .football-news {
+        margin-top: 11rem;
+    }
+
+    .football-news-h1 {
+        font-size: 1rem;
+    }
+
+    .football-news-center {
+        display: block;
+    }
+
+    .football-news-details {
+        margin-bottom: .6rem;
+        width: 95%;
+        height: 200px;
+        font-size: .6rem;
+    }
+
+    .football-news-details img {
+        height: 140px;
+    }
+
+    .about-center {
+        margin-top: 11rem;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .about-center p {
+        font-size: .8rem;
+        line-height: 1.8rem;
     }
 }

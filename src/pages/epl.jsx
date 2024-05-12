@@ -22,7 +22,7 @@ export const EPL = () => {
     }, [])
 
     return <div className="football-news">
-        <h1 style={{textAlign:"center", marginBottom:"2rem"}}>English Premier League</h1>
+        <h1 className='football-news-h1' style={{textAlign:"center", marginBottom:"2rem"}}>English Premier League</h1>
         <div className="football-news-center">
             {
                 news && news.map(data => (

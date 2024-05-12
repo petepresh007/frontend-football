@@ -8,6 +8,7 @@ body {
     background-size: cover;
     color: white;
     font-size: 90%;
+    scroll-behavior: smooth;
 }
 
 #root {

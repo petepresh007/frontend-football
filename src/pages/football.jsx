@@ -3,13 +3,13 @@ import axios from "axios";
 import { football, url } from "../server";
 import { useNavigate } from "react-router-dom";
 
-export const NPFL = () => {
+export const Football = () => {
     const [news, setNews] = useState("");
     const navigate = useNavigate();
 
     async function getNews() {
         try {
-            const { data } = await axios.get(`${football}/npfl`);
+            const { data } = await axios.get(`${football}/allfootball`);
             setNews(data)
             console.log(data);
         } catch (error) {
@@ -22,7 +22,7 @@ export const NPFL = () => {
     }, [])
 
     return <div className="football-news">
-        <h1 className="football-news-h1" style={{ textAlign: "center", marginBottom: "2rem" }}>Nigerian Proffessional Football League</h1>
+        <h1 className='football-news-h1' style={{ textAlign: "center", marginBottom: "2rem" }}>All News</h1>
         <div className="football-news-center">
             {
                 news && news.map(data => (

@@ -9,6 +9,11 @@ header {
     z-index: 1;
     background-color: black;
 }
+.socials-float-left a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #eee;
+}
 
 .nav-button {
     /* float: right; */
@@ -29,7 +34,7 @@ header {
 }
 
 .socials-logo {
-    font-size: 1rem;
+    font-size: 1.5rem;
     border: none;
     outline: none;
     cursor: pointer;
@@ -154,7 +159,7 @@ header {
         display: none;
     }
 
-    .nav-bar-section nav {
+    .nav-list {
         display: none;
     }
 
@@ -172,5 +177,21 @@ header {
     }
     .na-sr{
         font-size: .8rem;
+    }
+    .show-nav-section{
+        display: block;
+    }
+    .nav-bottom{
+        display: block;
+    }
+    .nav-bar-section nav a{
+        display: block;
+        margin-bottom: .6rem;
+        font-size: .6rem;
+        border-bottom: .5px solid #eee;
+        padding-bottom: .6rem;
+    }
+    .home-caret{
+        display: none;
     }
 }
