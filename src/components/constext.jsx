@@ -8,6 +8,7 @@ export const CreatedContext = ({ children }) => {
     /**GETTING CREDENTIALS */
     axios.defaults.withCredentials = true
     const [admin, setAdmin] = useState("");
+    const [showHeader, setShowHeader] = useState(false);
 
     const getAdmin = async () => {
         try {
@@ -28,7 +29,9 @@ export const CreatedContext = ({ children }) => {
     return (
         <UserContext.Provider value={{
             admin,
-            setAdmin           
+            setAdmin,
+            showHeader, 
+            setShowHeader         
         }}>
             {children}
         </UserContext.Provider>

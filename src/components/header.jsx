@@ -1,4 +1,4 @@
-import { FaBars, FaTemperatureHigh, FaTwitter, FaWhatsapp, FaFootballBall } from "react-icons/fa";
+import { FaBars, FaTwitter, FaWhatsapp, FaFootballBall } from "react-icons/fa";
 import { AiFillFacebook, AiFillInstagram, AiFillCaretDown } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from 'react';
@@ -11,11 +11,13 @@ export const HeaderElement = () => {
     const navigate = useNavigate();
     const [showHideNav, setshowHideNav] = useState(true);
     //const [admin, setAdmin] = useState("")
-    const { admin, setAdmin } = useContext(UserContext)
+    const { admin, setAdmin } = useContext(UserContext);
+    const { showHeader, setShowHeader } = useContext(UserContext);
     const [football, setFootball] = useState("");
     const [hidenavmobile, setHidenavmobile] = useState(true);
     axios.defaults.withCredentials = true;
 
+    const toggleHeader = () => setShowHeader(previous => !previous)
     const toggleNewsNav = () => setshowHideNav(previous => !previous);
     //const toggleFootball = () => setFootball(previous => !previous);
     const toggleMobileNav = () => setHidenavmobile(previous => !previous)
@@ -46,7 +48,7 @@ export const HeaderElement = () => {
 
 
     return (
-        <header>
+        <header className={`${showHeader ? "hide-header":""}`}>
             <div className="nav-button">
                 <section className="socials-float-left">
                     <p className="ctc-us">Total football, contact us</p>
@@ -72,7 +74,10 @@ export const HeaderElement = () => {
                         placeholder="search"
                     />
                 </form>
-                <FaSearch className="na-sr" />
+                <FaSearch className="na-sr" onClick={()=>{
+                    navigate("/search");
+                    toggleHeader()
+                }}/>
             </div>
 
 
@@ -82,10 +87,9 @@ export const HeaderElement = () => {
                         <h1 onClick={() => navigate("/")} style={{ cursor: "pointer" }}><span style={{ color: "red" }}>Total</span>Football</h1>
                         <img src="./football_2.jpeg" alt="" className="football-img" />
                     </section>
-                    <FaFootballBall onClick={() => toggleNewsNav()} />
+                    <FaFootballBall onClick={() => toggleNewsNav()}  className="disp-non-lrg"/>
                     <FaBars onClick={() => toggleMobileNav()} className="bars" />
                 </div>
-
 
                 <div className="nav-bar-section">
                     <nav className={`nav-list ${hidenavmobile ? "" : "show-nav-section"}`}>
@@ -96,7 +100,7 @@ export const HeaderElement = () => {
                             <AiFillCaretDown className="home-caret" onClick={() => toggleNewsNav()} />
                         </span>
                         <Link onClick={() => toggleMobileNav()}>Livescores</Link>
-                        <Link onClick={() => toggleMobileNav()}>Betting-tips</Link>
+                        <Link to='/bettips' onClick={() => toggleMobileNav()}>Betting-tips</Link>
                         {
                             admin ? (
                                 <span>

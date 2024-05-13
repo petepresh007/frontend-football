@@ -1,5 +1,5 @@
 import axios from "axios";
-import { landing, url, football } from "../server";
+import { landing, url, football, beturl } from "../server";
 import { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -19,6 +19,7 @@ export const HomePage = () => {
     const [bundesliga, setBundesliga] = useState("");
     const [npfl, setNpfl] = useState("");
     const [seriea, setSiriea] = useState("");
+    const [bet, setBet] = useState("");
     const navigate = useNavigate();
 
     const settings = {
@@ -152,6 +153,19 @@ export const HomePage = () => {
         allBreakingSirieA()
     }, [])
 
+    async function getAll() {
+        try {
+            const { data } = await axios.get(`${beturl}/get?limit=4`);
+            // console.log(data);
+            setBet(data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getAll();
+    }, []);
 
     return (
         <div className="hompage">
@@ -286,6 +300,20 @@ export const HomePage = () => {
                                         <small style={{ fontSize: ".5rem" }}>{data.date}</small>
                                         <img src={`${url}/upload/${data.file[0].filename}`} alt="images" />
                                         <p onClick={() => navigate(`/news/${data.id}`)}>{data.title}</p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </section>
+                                
+                    <section className="EPL">
+                        <h1>Betting Tips</h1>
+                        <div className="epl-center">
+                            {
+                                bet && bet.map((data) => (
+                                    <div key={data.id} className="epl-single">
+                                        <img src={`${url}/upload/${data.file}`} alt="image" />
+                                        <p>{data.title}</p>
                                     </div>
                                 ))
                             }

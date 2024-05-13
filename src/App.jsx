@@ -6,16 +6,17 @@ import { News } from "./pages/news";
 import { Login } from "./pages/login";
 import { Dashboard } from "./pages/dashboard";
 import { CreatedContext } from './components/constext';
-import {CreateNews} from './components/createNews';
-import {EPL} from "./pages/epl";
-import {Laliga} from "./pages/laliga";
-import {Bundesliga} from "./pages/bundesliga";
-import {SerieA} from "./pages/seriea";
-import {NPFL} from "./pages/npfl";
-import {UCL} from "./pages/ucl";
-import {About} from './pages/about';
-import {Football} from "./pages/football";
-import {Search} from "./components/search";
+import { CreateNews } from './components/createNews';
+import { EPL } from "./pages/epl";
+import { Laliga } from "./pages/laliga";
+import { Bundesliga } from "./pages/bundesliga";
+import { SerieA } from "./pages/seriea";
+import { NPFL } from "./pages/npfl";
+import { UCL } from "./pages/ucl";
+import { About } from './pages/about';
+import { Football } from "./pages/football";
+import { Search } from "./components/search";
+import { Bettips } from "./pages/bettips";
 
 const router = createBrowserRouter([
   {
@@ -41,43 +42,47 @@ const router = createBrowserRouter([
       },
       {
         path: "/createnews",
-        element: <CreateNews/>
+        element: <CreateNews />
       },
       {
-        path:"/epl",
-        element: <EPL/>
+        path: "/epl",
+        element: <EPL />
       },
       {
-        path:"/laliga",
-        element:<Laliga/>
+        path: "/laliga",
+        element: <Laliga />
       },
       {
-        path:"/bundesliga",
-        element:<Bundesliga/>
+        path: "/bundesliga",
+        element: <Bundesliga />
       },
       {
-        path:"/seriea",
-        element: <SerieA/>
+        path: "/seriea",
+        element: <SerieA />
       },
       {
-        path:"/npfl",
-        element:<NPFL/>
+        path: "/npfl",
+        element: <NPFL />
       },
       {
-        path:"/ucl",
-        element:<UCL/>
+        path: "/ucl",
+        element: <UCL />
       },
       {
-        path:'/about',
-        element:<About/>
+        path: '/about',
+        element: <About />
       },
       {
-        path:"/football",
-        element: <Football/>
+        path: "/football",
+        element: <Football />
       },
       {
-        path:"/search",
-        element: <Search/>
+        path: "/search",
+        element: <Search />
+      },
+      {
+        path: "/bettips",
+        element: <Bettips />
       }
     ]
   }
