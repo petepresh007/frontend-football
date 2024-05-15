@@ -96,6 +96,9 @@ header {
     align-items: center;
     gap: 10px;
 }
+.logo-football-img img{
+    background-color: black;
+}
 
 .home-caret {
     margin-left: 1rem;
@@ -273,5 +276,14 @@ header {
     .flex-search img {
         width: 80px;
         height: 60px;
+    }
+    .bars{
+        font-size: 1.2rem;
+    }
+    .disp-non-lrg{
+        font-size: 1.2rem;
+    }
+    .na-sr{
+        font-size: 1.2rem;
     }
 }

@@ -48,7 +48,7 @@ export const HeaderElement = () => {
 
 
     return (
-        <header className={`${showHeader ? "hide-header":""}`}>
+        <header className={`${showHeader ? "hide-header" : ""}`}>
             <div className="nav-button">
                 <section className="socials-float-left">
                     <p className="ctc-us">Total football, contact us</p>
@@ -74,10 +74,10 @@ export const HeaderElement = () => {
                         placeholder="search"
                     />
                 </form>
-                <FaSearch className="na-sr" onClick={()=>{
+                <FaSearch className="na-sr" onClick={() => {
                     navigate("/search");
                     toggleHeader()
-                }}/>
+                }} />
             </div>
 
 
@@ -87,7 +87,7 @@ export const HeaderElement = () => {
                         <h1 onClick={() => navigate("/")} style={{ cursor: "pointer" }}><span style={{ color: "red" }}>Total</span>Football</h1>
                         <img src="./football_2.jpeg" alt="" className="football-img" />
                     </section>
-                    <FaFootballBall onClick={() => toggleNewsNav()}  className="disp-non-lrg"/>
+                    <FaFootballBall onClick={() => toggleNewsNav()} className="disp-non-lrg" />
                     <FaBars onClick={() => toggleMobileNav()} className="bars" />
                 </div>
 
@@ -99,7 +99,7 @@ export const HeaderElement = () => {
                             <Link to='/football' onClick={() => toggleMobileNav()}>Football</Link>
                             <AiFillCaretDown className="home-caret" onClick={() => toggleNewsNav()} />
                         </span>
-                        <Link onClick={() => toggleMobileNav()}>Livescores</Link>
+                        <Link to='/livescores' onClick={() => toggleMobileNav()}>Livescores</Link>
                         <Link to='/bettips' onClick={() => toggleMobileNav()}>Betting-tips</Link>
                         {
                             admin ? (

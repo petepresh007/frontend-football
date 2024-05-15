@@ -313,7 +313,7 @@ export const HomePage = () => {
                                 bet && bet.map((data) => (
                                     <div key={data.id} className="epl-single">
                                         <img src={`${url}/upload/${data.file}`} alt="image" />
-                                        <p>{data.title}</p>
+                                        <p onClick={() => navigate(`/bet/${data.id}`)}>{data.title}</p>
                                     </div>
                                 ))
                             }

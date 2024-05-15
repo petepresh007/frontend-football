@@ -17,6 +17,8 @@ import { About } from './pages/about';
 import { Football } from "./pages/football";
 import { Search } from "./components/search";
 import { Bettips } from "./pages/bettips";
+import {BetSingle} from './pages/betone';
+import {Livescores} from "./pages/livescores";
 
 const router = createBrowserRouter([
   {
@@ -83,6 +85,14 @@ const router = createBrowserRouter([
       {
         path: "/bettips",
         element: <Bettips />
+      },
+      {
+        path:"/bet/:id",
+        element: <BetSingle/>
+      },
+      {
+        path:"/livescores",
+        element: <Livescores/>
       }
     ]
   }
