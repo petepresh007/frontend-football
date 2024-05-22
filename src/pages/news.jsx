@@ -37,7 +37,7 @@ export const News = () =>{
         <div className="selected-news">
             <FaArrowLeft className="btn-bck" onClick={()=>{
                 window.history.back();
-                toggleHeader()
+                //toggleHeader()
             }}/>
             <div className="selected-news-center">
                 <div className="h-n">

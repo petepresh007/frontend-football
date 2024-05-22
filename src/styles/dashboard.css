@@ -5,6 +5,9 @@
     margin-bottom: 4rem;
     font-size: .8rem;
 }
+.bck-btn{
+    display: none;
+}
 
 .dashboard input {
     width: 100%;
@@ -128,5 +131,20 @@
 
     .link-adm {
         padding: .4rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .dashboard{
+        margin-top: 12rem;
+    }
+    .dashboard-center{
+        flex-direction: column;
+    }
+    .dashboard-center-right{
+        width: 100%;
+    }
+    .bck-btn{
+        display: block;
+        font-size: 1rem;
     }
 }

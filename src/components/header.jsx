@@ -6,6 +6,7 @@ import { adminUrl } from "../server";
 import axios from "axios";
 import { UserContext } from "../components/constext";
 import { FaSearch } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export const HeaderElement = () => {
     const navigate = useNavigate();
@@ -92,7 +93,9 @@ export const HeaderElement = () => {
                 </div>
 
                 <div className="nav-bar-section">
-                    <nav className={`nav-list ${hidenavmobile ? "" : "show-nav-section"}`}>
+                    <motion.nav className={`nav-list ${hidenavmobile ? "" : "show-nav-section"}`}
+                        transition={{ duration: 1 }}
+                    >
                         <Link to='/' onClick={() => toggleMobileNav()}>Home</Link>
                         <Link to='/about' onClick={() => toggleMobileNav()}>About</Link>
                         <span>
@@ -105,7 +108,10 @@ export const HeaderElement = () => {
                             admin ? (
                                 <span>
                                     <Link to="/dashboard" onClick={() => toggleMobileNav()}>Account</Link>
-                                    <Link onClick={() => logout()} >Logout</Link>
+                                    <Link onClick={() =>{
+                                        logout()
+                                        toggleMobileNav()
+                                    }} >Logout</Link>
                                 </span>
                             ) : (
                                 <span>
@@ -115,7 +121,7 @@ export const HeaderElement = () => {
                             )
                         }
 
-                    </nav>
+                    </motion.nav>
                     <section className={`news-section ${showHideNav ? "" : "show-news-nav"}`}>
                         <Link to="/epl" onClick={() => toggleNewsNav()}>EPL</Link>
                         <Link to='/seriea' onClick={() => toggleNewsNav()}>Serie A</Link>

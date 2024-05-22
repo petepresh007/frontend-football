@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import {motion} from "framer-motion";
 
 
 export const HomePage = () => {
@@ -25,7 +26,7 @@ export const HomePage = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 300,
+        speed: 400,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -176,7 +177,13 @@ export const HomePage = () => {
                             allNewsToDisp && allNewsToDisp.map(data => (
                                 <div className="home-top-display" key={data.id}>
                                     <img src={`${url}/upload/${data.file[0].filename}`} alt="image" />
-                                    <p onClick={() => navigate(`/news/${data.id}`)}>{data.title}</p>
+                                    <motion.p onClick={() => navigate(`/news/${data.id}`)}
+                                        initial={{ opacity: 0, y: -50 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 1 }}
+                                    >
+                                        {data.title}
+                                    </motion.p>
                                 </div>
                             ))
                         }

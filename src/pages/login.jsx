@@ -3,7 +3,7 @@ import {adminUrl} from "../server";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import {UserContext} from "../components/constext";
-
+import { motion } from 'framer-motion';
 
 export const Login = () => {
     const [email, setEmail] = useState("");
@@ -39,10 +39,15 @@ export const Login = () => {
         }
     }
 
+
     return (
         <div className="login-admin">
             <div className="login-admin-center">
-                <div  className="login-admin-center-details">
+                <motion.div  className="login-admin-center-details"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                >
                     <h1>Login</h1>
                     <form action="" onSubmit={handleLogin}>
                         <div>
@@ -64,7 +69,7 @@ export const Login = () => {
 
                         <button>submit</button>
                     </form>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

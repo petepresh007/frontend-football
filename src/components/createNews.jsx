@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { football } from "../server";
-import {AiOutlineUpload,} from "react-icons/ai"
-import {FaFile} from "react-icons/fa"
+import { AiOutlineUpload, AiOutlineArrowLeft } from "react-icons/ai"
+import {FaFile} from "react-icons/fa";
+import {motion} from "framer-motion";
 
 export const CreateNews = () => {
     const [title, setTitle] = useState("")
@@ -34,7 +35,12 @@ export const CreateNews = () => {
 
 
     return <div className="create-news">
-        <div className="create-news-center">
+        <AiOutlineArrowLeft className="bck-btn" onClick={() => window.history.back()} />
+        <motion.div className="create-news-center"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+        >
             <h1>Football</h1>
             <form action="" onSubmit={handleRegistration}>
                 <div>
@@ -85,6 +91,6 @@ export const CreateNews = () => {
                 </div>
                 <button>Submit</button>
             </form>
-        </div>
+        </motion.div>
     </div>
 }

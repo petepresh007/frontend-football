@@ -4,6 +4,7 @@ import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../components/constext";
 import { FaArrowLeft, FaSearch, FaServer } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import {motion} from "framer-motion"
 
 export const Search = () => {
     const [news, setNews] = useState("");
@@ -27,7 +28,11 @@ export const Search = () => {
     }, []);
 
     return (
-        <div className="general-search">
+        <motion.div className="general-search"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+        >
             <FaArrowLeft className='bk-arr-btn' onClick={() => {
                 window.history.back()
                 toggleHeader()
@@ -47,18 +52,22 @@ export const Search = () => {
                 {
                     news && news.map((data) => (
                         <div className="general-search-details-center">
-                            <div className="flex-search">
+                            <motion.div className="flex-search"
+                                initial={{ opacity: 0, y: -50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1 }}
+                            >
                                 <p onClick={() => {
                                     navigate(`/news/${data.id}`)
                                     toggleHeader()
                                 }}>{data.title}</p>
                                 <img src={`${url}/upload/${data.file[0].filename}`} alt="image" />
-                            </div>
+                            </motion.div>
 
                         </div>
                     ))
                 }
             </div>
-        </div>
+        </motion.div>
     )
 }

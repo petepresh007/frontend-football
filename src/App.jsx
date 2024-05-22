@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, useLocation } from "react-router-dom";
 import { ErrorPage } from "./components/errorPage";
 import { SharedLayout } from "./components/sharedlayout";
 import { HomePage } from "./pages/homepage";
@@ -19,6 +19,7 @@ import { Search } from "./components/search";
 import { Bettips } from "./pages/bettips";
 import {BetSingle} from './pages/betone';
 import {Livescores} from "./pages/livescores";
+
 
 const router = createBrowserRouter([
   {
@@ -103,8 +104,8 @@ const router = createBrowserRouter([
 function App() {
   return (
     <CreatedContext>
-      <RouterProvider router={router} >
-      </RouterProvider>
+        <RouterProvider router={router}  />
+        {/* </RouterProvider> */}
     </CreatedContext>
   )
 }
