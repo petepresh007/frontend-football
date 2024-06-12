@@ -5,7 +5,8 @@
     margin-bottom: 4rem;
     font-size: .8rem;
 }
-.bck-btn{
+
+.bck-btn {
     display: none;
 }
 
@@ -49,6 +50,7 @@
     display: flex;
     align-items: center;
     margin-top: 2rem;
+    gap: 33px;
 }
 
 .dashboard-center-right {
@@ -58,6 +60,19 @@
     max-height: 470px;
     overflow-y: auto;
     position: relative;
+}
+
+.dashboard-center-left {
+    width: 50%;
+    background: rgba(0, 0, 0, .5);
+    padding: .6rem;
+    max-height: 470px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.dashboard-center-left h1 {
+    font-size: 1rem;
 }
 
 .dash-news-disp-cen {
@@ -113,6 +128,43 @@
     font-size: .6rem;
 }
 
+.dash-approvals h1 {
+    font-size: .8rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+.approved-user {
+    width: 100%;
+}
+
+.not-approved {
+    width: 100%;
+}
+
+.approved-user,
+.not-approved,
+.allusers {
+    background-color: black;
+    padding: .6rem;
+    width: 96%;
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.not-approved-center,
+.approve-user-center,
+.allusers-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
 /**TABLET*/
 @media screen and (max-width: 768px) {
     .dashboard {
@@ -133,18 +185,30 @@
         padding: .4rem;
     }
 }
-@media screen and (max-width: 480px){
-    .dashboard{
+
+@media screen and (max-width: 480px) {
+    .dashboard {
         margin-top: 12rem;
+        font-size: .9rem;
     }
-    .dashboard-center{
+
+    .dashboard-center {
         flex-direction: column;
+        gap: 1rem;
     }
-    .dashboard-center-right{
+
+    .dashboard-center-right {
         width: 100%;
     }
-    .bck-btn{
+
+    .bck-btn {
         display: block;
         font-size: 1rem;
+    }
+    .dashboard-center-left{
+        width: 100%;
+    }
+    .dashboard form input{
+        font-size: .9rem;
     }
 }

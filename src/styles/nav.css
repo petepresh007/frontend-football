@@ -5,7 +5,7 @@ header {
     left: 0;
     right: 0;
     box-shadow: 2px 2px 2px gray;
-    font-size: .7rem;
+    font-size: .8rem;
     z-index: 1;
     background-color: black;
 }
@@ -14,6 +14,11 @@ header {
     text-decoration: none;
     font-size: 1.5rem;
     color: #eee;
+}
+.login-avatar{
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
 }
 
 .disp-non-lrg {
@@ -33,6 +38,7 @@ header {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid gray;
+    gap: 20px;
 }
 
 .socials-float-left {
@@ -96,7 +102,8 @@ header {
     align-items: center;
     gap: 10px;
 }
-.logo-football-img img{
+
+.logo-football-img img {
     background-color: black;
 }
 
@@ -162,6 +169,9 @@ header {
     header {
         font-size: .8rem;
     }
+    .socials-float-left{
+        width: 80%;
+    }
 
     .ctc-us {
         display: none;
@@ -206,9 +216,9 @@ header {
     .nav-bar-section nav a {
         display: block;
         margin-bottom: .6rem;
-        font-size: .6rem;
+        font-size: .9rem;
         border-bottom: .5px solid #eee;
-        padding-bottom: .6rem;
+        padding-bottom: .8rem;
     }
 
     .home-caret {
@@ -277,13 +287,36 @@ header {
         width: 80px;
         height: 60px;
     }
-    .bars{
+
+    .bars {
         font-size: 1.2rem;
     }
-    .disp-non-lrg{
-        font-size: 1.2rem;
+
+    .disp-non-lrg {
+        font-size: .4rem;
+        background: #eee;
+        color: black;
+        padding: .3rem;
+        font-weight: bolder;
+        border-radius: 10%;
     }
-    .na-sr{
-        font-size: 1.2rem;
+
+    .na-sr {
+        font-size: 1.4rem;
+    }
+
+    .news-section a {
+        font-size: .9rem;
+    }
+
+    .socials-logo {
+        font-size: 1.1rem;
+    }
+
+    .nav-bottom .bars {
+        font-size: 1.5rem;
+    }
+    .login-avatar{
+        font-size: 1.1rem;
     }
 }

@@ -1,11 +1,10 @@
 import { FaBars, FaTwitter, FaWhatsapp, FaFootballBall } from "react-icons/fa";
-import { AiFillFacebook, AiFillInstagram, AiFillCaretDown } from "react-icons/ai";
+import { AiFillFacebook, AiFillInstagram, AiFillCaretDown, AiOutlineUser, AiOutlineSearch, AiOutlineBars } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from 'react';
-import { adminUrl } from "../server";
+import { adminUrl, userUrl } from "../server";
 import axios from "axios";
 import { UserContext } from "../components/constext";
-import { FaSearch } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export const HeaderElement = () => {
@@ -13,7 +12,7 @@ export const HeaderElement = () => {
     const [showHideNav, setshowHideNav] = useState(true);
     //const [admin, setAdmin] = useState("")
     const { admin, setAdmin } = useContext(UserContext);
-    const { showHeader, setShowHeader } = useContext(UserContext);
+    const { showHeader, setShowHeader, reguser, setReguser } = useContext(UserContext);
     const [football, setFootball] = useState("");
     const [hidenavmobile, setHidenavmobile] = useState(true);
     axios.defaults.withCredentials = true;
@@ -26,9 +25,9 @@ export const HeaderElement = () => {
     const getAdmin = async () => {
         try {
             const { data } = await axios.get(`${adminUrl}/persistlogin`);
-            setAdmin(data)
+            setAdmin(data);
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
 
@@ -42,6 +41,17 @@ export const HeaderElement = () => {
             console.log(data)
             setAdmin("");
             navigate("/adminlogin")
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const logoutUser = async () => {
+        try {
+            const { data } = await axios.post(`${userUrl}/logoutuser`);
+            console.log(data)
+            setReguser("");
+            navigate("/loginuser");
         } catch (error) {
             console.log(error)
         }
@@ -68,6 +78,8 @@ export const HeaderElement = () => {
                         <FaWhatsapp className="socials-logo" />
                     </Link>
 
+                    <AiOutlineUser className="login-avatar" onClick={() => navigate("/loginuser")} />
+
                 </section>
                 <form className="nav-search">
                     <input
@@ -75,7 +87,9 @@ export const HeaderElement = () => {
                         placeholder="search"
                     />
                 </form>
-                <FaSearch className="na-sr" onClick={() => {
+                {/* <AiOutlineUser style={{ fontSize: "1.1rem" }} onClick={() => navigate("/loginuser")} />  */}
+               
+                <AiOutlineSearch className="na-sr" onClick={() => {
                     navigate("/search");
                     toggleHeader()
                 }} />
@@ -88,8 +102,9 @@ export const HeaderElement = () => {
                         <h1 onClick={() => navigate("/")} style={{ cursor: "pointer" }}><span style={{ color: "red" }}>Total</span>Football</h1>
                         <img src="./football_2.jpeg" alt="" className="football-img" />
                     </section>
-                    <FaFootballBall onClick={() => toggleNewsNav()} className="disp-non-lrg" />
-                    <FaBars onClick={() => toggleMobileNav()} className="bars" />
+                    {/* <FaFootballBall onClick={() => toggleNewsNav()} className="disp-non-lrg" /> */}
+                    <span className="disp-non-lrg" onClick={() => toggleNewsNav()}>football</span>
+                    <AiOutlineBars onClick={() => toggleMobileNav()} className="bars" />
                 </div>
 
                 <div className="nav-bar-section">
@@ -108,16 +123,30 @@ export const HeaderElement = () => {
                             admin ? (
                                 <span>
                                     <Link to="/dashboard" onClick={() => toggleMobileNav()}>Account</Link>
-                                    <Link onClick={() =>{
+                                    <Link onClick={() => {
                                         logout()
                                         toggleMobileNav()
                                     }} >Logout</Link>
                                 </span>
                             ) : (
                                 <span>
-                                    <Link onClick={() => toggleMobileNav()}>Sign-up</Link>
-                                    <Link onClick={() => toggleMobileNav()}>Sign-in</Link>
+                                    {/* <Link to='/createuser' onClick={() => toggleMobileNav()}>Sign-up</Link>
+                                        <Link to='/loginuser' onClick={() => toggleMobileNav()}>Sign-in</Link> */}
                                 </span>
+                            )
+                        }
+
+                        {
+                            reguser ? (
+                                <span>
+                                    <Link to="/dashboard" onClick={() => toggleMobileNav()}>Dashboard</Link>
+                                    <Link onClick={() => {
+                                        logoutUser()
+                                        toggleMobileNav()
+                                    }} >Logout</Link>
+                                </span>
+                            ):(
+                                <span></span>
                             )
                         }
 

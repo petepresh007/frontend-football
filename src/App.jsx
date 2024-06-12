@@ -17,9 +17,13 @@ import { About } from './pages/about';
 import { Football } from "./pages/football";
 import { Search } from "./components/search";
 import { Bettips } from "./pages/bettips";
-import {BetSingle} from './pages/betone';
-import {Livescores} from "./pages/livescores";
+import { BetSingle } from './pages/betone';
+import { Livescores } from "./pages/livescores";
+import { LoginUser, CreateUser } from "./components/createUser";
+import {UserDashboard} from "./pages/userDashboard";
 
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
@@ -88,13 +92,25 @@ const router = createBrowserRouter([
         element: <Bettips />
       },
       {
-        path:"/bet/:id",
-        element: <BetSingle/>
+        path: "/bet/:id",
+        element: <BetSingle />
       },
       {
-        path:"/livescores",
-        element: <Livescores/>
-      }
+        path: "/livescores",
+        element: <Livescores />
+      },
+      {
+        path: "/createuser",
+        element: <CreateUser />
+      },
+      {
+        path: "/loginuser",
+        element: <LoginUser />
+      },
+      {
+        path: "/userdashboard",
+        element: <UserDashboard />
+      },
     ]
   }
 ])
@@ -104,8 +120,19 @@ const router = createBrowserRouter([
 function App() {
   return (
     <CreatedContext>
-        <RouterProvider router={router}  />
-        {/* </RouterProvider> */}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <RouterProvider router={router} />
+      {/* </RouterProvider> */}
     </CreatedContext>
   )
 }
