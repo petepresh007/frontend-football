@@ -106,6 +106,86 @@
     font-size: .8rem;
 }
 
+
+.register-user{
+    display: flex;
+    /* align-items: center; */
+    margin-top: 18rem;
+    justify-content: center;
+    min-height: 150vh;
+}
+
+.register-user-center{
+    background: rgba(0, 0, 0, .5);
+    width: 350px;
+    padding: 1rem;
+    height: 100%;
+}
+
+.register-user-center input{
+    margin-bottom: 1rem;
+    width: 91.5%;
+    padding: .8rem;
+    outline: none;
+    border: none;
+}
+.file-avatar{
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+}
+.upload{
+    cursor: pointer;
+}
+
+.register-user-center button{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: .8rem;
+    background: black;
+    color: #eee;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.forget-password{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.forget-password-center{
+    background: rgba(0, 0, 0, .5);
+    padding: 1rem;
+    height: 100%;
+    width: 400px;
+}
+
+.forget-password-center input{
+    border: none;
+    outline: none;
+    padding: .7rem;
+    width: 70%;
+}
+
+.forget-password-center button{
+    margin-left: .5rem;
+    outline: none;
+    border: none;
+    width: 60px;
+    padding: .7rem;
+    background: black;
+    color: white;
+}
+
 /**TABLET MODE*/
 @media screen and (max-width: 768px) {
     .login-admin-center-details {
@@ -177,5 +257,8 @@
     padding: .8rem;
     width: 90.5%;
     font-size: .8rem;
+}
+.forget-password-center button{
+    width: 50px;
 }
 }

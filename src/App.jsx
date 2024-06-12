@@ -21,6 +21,7 @@ import { BetSingle } from './pages/betone';
 import { Livescores } from "./pages/livescores";
 import { LoginUser, CreateUser } from "./components/createUser";
 import {UserDashboard} from "./pages/userDashboard";
+import {ForgetPassword} from "./components/forgetPassword";
 
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -111,6 +112,10 @@ const router = createBrowserRouter([
         path: "/userdashboard",
         element: <UserDashboard />
       },
+      {
+        path:"/passwordreset",
+        element:<ForgetPassword/>
+      }
     ]
   }
 ])

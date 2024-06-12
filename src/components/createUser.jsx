@@ -54,7 +54,7 @@ export const CreateUser = () => {
 
     return (
         <div className="register-user">
-            <motion.div className="register-user-center" style={{ marginTop: "17rem" }}
+            <motion.div className="register-user-center" 
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
@@ -131,7 +131,7 @@ export const CreateUser = () => {
                         <div>
                             <input
                                 type="file"
-                                accept="image*/"
+                                accept="image/*"
                                 name="file"
                                 id="file"
                                 onChange={(e) => setFiles(e.target.files[0])}
@@ -140,7 +140,7 @@ export const CreateUser = () => {
                             <label htmlFor="file" > <RxUpload className="upload" /></label>
                         </div>
                     </div>
-                    <button className="submit">create</button>
+                    <button className="submit" type="submit">Register</button>
                 </form>
 
                 <div className="handle-log-sign">
@@ -170,13 +170,14 @@ export const LoginUser = () => {
             navigate("/userdashboard");
             setShowHeader(false);
             setReguser(data)
+            console.log(email, password)
             //location.reload()
         } catch (error) {
             //alert(error.response.data.msg);
             toast.error(error.response.data.msg)
         }
-        setEmail("")
-        setPassword("")
+        // setEmail("")
+        // setPassword("")
     }
 
 
@@ -208,10 +209,11 @@ export const LoginUser = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
-                        <button className="submit">Login</button>
+                        <button className="submit" type="submit">Login</button>
+                        {/* <input type="submit" value="sub" className="submit" /> */}
                     </form>
                     <div className="handle-log-sign">
-                        <span>Forget password?</span>
+                        <span onClick={() => navigate("/passwordreset")}>Forget password?</span>
                         <span>Don't have an account? <Link to="/createuser">Sign Up</Link></span>
                     </div>
                 </motion.div>
